@@ -8,7 +8,8 @@ const usuariosGET = (req, res = response) => {
 
 }
 
-const usuariosPUT = (req, res = response ) => {
+const usuariosPUT = (req = request, res = response ) => {
+    
     res.json({
         mg: "put- controller"
     });
