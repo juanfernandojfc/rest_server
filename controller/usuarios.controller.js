@@ -37,12 +37,7 @@ const usuariosPOST = async (req = request, res = response) => {
 
 
     //verificar correo unico
-    let existeUsuario = await Usuario.findOne({ correo })
-    if (existeUsuario) {
-        return res.status(400).json({
-            mensaje: "ya existe un usuario registrado con ese correo electronico"
-        })
-    }
+    
     
    
 
@@ -53,7 +48,7 @@ const usuariosPOST = async (req = request, res = response) => {
 
     // console.log("peticion POST: ", req.body);
     res.json({
-        mg: "post- controller",
+        mg: "post- controller: usuario creado",
         usuario
     });
 }
